@@ -26,7 +26,7 @@ def hit_detection(img,brightest_pixel,non_zero,count):
         if img_crop.shape[0] == crop_size * 2 and img_crop.shape[1] == crop_size * 2:
             flag = True
             multi_detection += 1
-            cv2.imwrite("/home/pi/i/PiCamera/OpenCV/test/"+str(count)+"."+str(multi_detection)+".png",img_crop)
+            cv2.imwrite("/home/pi/i/PiCamera/OpenCV/Hits/"+str(count)+"."+str(multi_detection)+".png",img_crop)
     if flag:
         count += 1
     print(hit_time,pos,brightest_pixel,xy_coordinates,sep=',', file=open("/home/pi/i/report.txt","a"))
